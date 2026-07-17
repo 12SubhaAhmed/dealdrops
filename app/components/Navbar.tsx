@@ -50,7 +50,7 @@ export default function Navbar() {
 
           <Link href="/">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo-new.png"
               alt="Logo"
               width={150}
               height={55}
