@@ -57,7 +57,7 @@ export default async function Home() {
       <Hero banners={banners} />
       {/* Main Blog Grid Container */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
-        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight mb-8">
+        <h2 className="text-4xl font-extrabold text-gray-900 font-sans mb-8 text-center">
           Our Latest Product Reviews
         </h2>
 

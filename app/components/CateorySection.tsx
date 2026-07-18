@@ -41,10 +41,10 @@ export default function CategorySection({
 
       {/* Heading */}
 
-      <div className="flex flex-col lg:flex-row justify-between items-center mb-10 gap-5">
+      <div className="flex flex-col lg:flex-row mb-10 gap-5">
 
         <div>
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold font-sans text-gray-900">
             Browse By Category
           </h2>
 
