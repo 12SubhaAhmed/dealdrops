@@ -37,7 +37,7 @@ export default function BlogHero({ article }: BlogHeroProps) {
         initial={{ opacity: 0, y: 35 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.6 }}
-        className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900 max-w-5xl"
+        className="mt-6 text-3xl md:text-5xl lg:text-4xl font-black leading-tight text-gray-900 max-w-5xl"
       >
         {article.title}
       </motion.h1>
@@ -96,19 +96,9 @@ export default function BlogHero({ article }: BlogHeroProps) {
             height={800}
             priority
             className="w-full h-70 md:h-112.5 lg:h-140 object-cover transition duration-700 hover:scale-105"
-          />
-          <div className="flex justify-center mt-4 mb-4">
-          <a
-            href={article.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-3 bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300"
-          >
-            {article.buttonText || "Shop Now"}
-            <FiArrowUpRight size={20} />
-          </a>
-        </div>
+          /> 
         </motion.div>
+        
       )}
     </section>
   );

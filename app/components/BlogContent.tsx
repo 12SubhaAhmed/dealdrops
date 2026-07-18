@@ -1,11 +1,29 @@
 "use client";
 import { PortableText } from "@portabletext/react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
 interface BlogContentProps {
   article: any;
 }
 
+
+
+const components = {
+  types: {
+    image: ({ value }: any) => (
+      <div className="my-10">
+        <Image
+          src={urlFor(value).url()}
+          alt=""
+          width={900}
+          height={600}
+          className="rounded-2xl w-full object-cover"
+        />
+      </div>
+    ),
+  },
+};
 export default function BlogContent({ article }: BlogContentProps) {
   return (
     <motion.article
@@ -52,7 +70,7 @@ export default function BlogContent({ article }: BlogContentProps) {
 
         prose-img:rounded-2xl
         prose-img:shadow-lg
-
+      
         prose-blockquote:border-l-4
         prose-blockquote:border-blue-600
         prose-blockquote:bg-blue-50
@@ -70,8 +88,12 @@ export default function BlogContent({ article }: BlogContentProps) {
         prose-td:p-3
         "
       >
+        
         {article.content ? (
-          <PortableText value={article.content} />
+          <PortableText
+          value={article.content}
+          components={components}
+        />
         ) : (
           <p>No content available.</p>
         )}

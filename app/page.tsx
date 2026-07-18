@@ -7,7 +7,7 @@ import Footer from "@/app/components/Footer";
 
 // Sanity se real-time saare blogs fetch karne ka function
 async function getAllBlogs() {
-  const query = `*[_type == "blog"] | order(_createdAt desc) {
+  const query = `*[_type == "blog"] | order(_createdAt desc)[0...6] {
     _id,
     title,
     category,

@@ -34,14 +34,14 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "py-4" : "py-0"
+        scrolled ? "py-4" : "py-3"
       }`}
     >
       <div
         className={`max-w-7xl mx-auto transition-all duration-500 ${
           scrolled
             ? "mx-6 rounded-2xl bg-white/20 backdrop-blur-xl border border-white/20 shadow-2xl"
-            : "bg-white border-b border-gray-100 shadow-sm"
+            : "bg-white border-b border-gray-100 shadow-sm rounded-2xl"
         }`}
       >
         <div className="flex h-20 items-center justify-between px-6 lg:px-8">

@@ -33,38 +33,27 @@ export default function Hero({banners}: HeroProps) {
 
           {banners.map((banner) => (
   <SwiperSlide key={banner._id}>
-    <div className="relative h-125 w-full rounded-3xl overflow-hidden">
+  <Link
+    href={banner.affiliateUrl || "#"}
+    target="_blank"
+    rel="noopener noreferrer sponsored"
+    className="block"
+  >
+    <div className="relative h-125 w-full rounded-3xl overflow-hidden cursor-pointer">
 
       <Image
         src={urlFor(banner.image).url()}
         alt={banner.title}
         fill
-        className="object-cover"
+        className="object-cover transition duration-500 hover:scale-105"
       />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-start px-14">
-
-      
-        {banner.affiliateUrl && (
-          <Link
-            href={banner.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8"
-          >
-            <button className="bg-blue-400 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition">
-              {banner.buttonText || "Shop Now"}
-            </button>
-          </Link>
-        )}
-      </div>
     </div>
-  </SwiperSlide>
-))}
+  </Link>
+</SwiperSlide>))}
         </Swiper>
       </div>
     </section>
