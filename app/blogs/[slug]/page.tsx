@@ -1,3 +1,4 @@
+//blog/slug/page.tsx
 import { client } from "@/sanity/lib/client";
 import Footer from "@/app/components/Footer";
 import BlogHero from "@/app/components/BlogHero";
